@@ -214,24 +214,34 @@ font-size:18px;
 
 <div class="song-layout">
 
-<img id="coverBig" class="cover-big" src="cover1.jpg">
+<img
+id="coverBig"
+class="cover-big"
+src="covers/MrMeowFunkV4Cover.png">
 
 <div class="song-info">
 
-<div id="songTitle" class="song-title">
+<div
+id="songTitle"
+class="song-title">
 MR MEOW FUNK V4
 </div>
 
-<div id="artist" class="artist">
+<div
+id="artist"
+class="artist">
 TheRudyPlayer
 </div>
 
-<div id="date" class="date">
+<div
+id="date"
+class="date">
 📅 Creado el 17 Junio 2026
 </div>
 
-<audio id="audioPlayer" controls>
-<source src="MrMeowFunkV4Song.mp3" type="audio/mpeg">
+<audio
+id="audioPlayer"
+controls>
 </audio>
 
 </div>
@@ -241,10 +251,11 @@ TheRudyPlayer
 </div>
 
 <script>
+
 function openSong(title, artist, date, cover, audio){
 
-document.getElementById("homePage").style.display="none";
-document.getElementById("songPage").style.display="block";
+document.getElementById("homePage").style.display = "none";
+document.getElementById("songPage").style.display = "block";
 
 document.getElementById("songTitle").textContent = title;
 document.getElementById("artist").textContent = artist;
@@ -254,15 +265,20 @@ document.getElementById("date").textContent =
 document.getElementById("coverBig").src = cover;
 
 const player = document.getElementById("audioPlayer");
+
+player.pause();
 player.src = audio;
 player.load();
-player.play();
+
 }
 
 function goBack(){
-document.getElementById("songPage").style.display="none";
-document.getElementById("homePage").style.display="block";
+
+document.getElementById("songPage").style.display = "none";
+document.getElementById("homePage").style.display = "block";
+
 }
+
 </script>
 
 </body>
